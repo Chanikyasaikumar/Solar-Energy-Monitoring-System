@@ -10,6 +10,7 @@ import plotly.express as px
 from prophet import Prophet
 import plotly.graph_objs as go
 import numpy as np
+import os
 
 
 conn = pymysql.connect(host=os.environ.get('your-solar-1234.d.render.domains'), user=os.environ.get('root'), password=os.environ.get('Chanikya@123'), db=os.environ.get('solar'))
