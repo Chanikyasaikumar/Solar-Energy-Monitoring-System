@@ -4,3 +4,5 @@ pvlib
 gunicorn
 Plotly
 mysqlclient
+pymysql
+
