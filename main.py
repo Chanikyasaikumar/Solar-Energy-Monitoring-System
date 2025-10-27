@@ -13,7 +13,7 @@ import numpy as np
 import os
 
 
-conn = pymysql.connect(host=os.environ.get('your-solar-1234.d.render.domains'), user=os.environ.get('root'), password=os.environ.get('Chanikya@123'), db=os.environ.get('solar'))
+conn = pymysql.connect(host=os.environ.get('DB_HOST'), user=os.environ.get('DB_USER'), password=os.environ.get('DB_PASSWORD'), db=os.environ.get('DB_NAME'))
 cursor = conn.cursor()
 app = Flask(__name__)
 app.secret_key = "solar"
