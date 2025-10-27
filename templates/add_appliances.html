@@ -1,0 +1,53 @@
+{% include 'rhead.html'%}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("#appliances").on("change", ()=>{
+        let watt = $("#appliances").find('option:selected').data('category');
+        console.log(watt)
+        if (String(watt).indexOf(" â ") !== -1 ) {
+            console.log("It contains 'world'!");
+            let result = str.split(" - ");
+            watt = (parseInt(result[0]) + parseInt(result[1]))/2
+        }
+        $("#wattage").val(watt);
+    })
+});
+</script>
+
+<body class="app">
+
+<div class="row">
+    <div class="col-1"></div>
+    <div class="col-4 card p-20 mt-100">
+        <form action="add_appliance_action">
+            <div class="p-10 text-center h3">Add Home Appliances</div>
+            <div class="mt-20 p-10">
+                <label for="appliances">My Appliances</label>
+                <select name="appliances" id="appliances" class="form-control" required>
+                    <option value="">Choose Appliances</option>
+                    {% for appliance in appliances.values %}
+                        <option value="{{appliance[1]}} {{appliance[2]}}" data-category="{{appliance[3]}}">{{appliance[1]}} {{appliance[2]}}</option>
+                    {% endfor  %}
+                </select>
+            </div>
+
+            <div class="p-10">
+                <label for="wattage">Wattage</label>
+                <input type="number" name="wattage" id="wattage" placeholder="Wattage" class="form-control" required>
+            </div>
+
+            <div class="p-10">
+                <label for="hrs_per_day">Hours Per Day</label>
+                <input type="number" id="hrs_per_day" class="form-control" name="hrs_per_day" placeholder="Hours Per Day" required>
+            </div>
+            <div class="text-center mt-15">
+                <input type="submit" value="Add Appliances" class="p-10">
+            </div>
+        </form>
+    </div>
+    <div class="col-7"></div>
+</div>
+
+</body>
+

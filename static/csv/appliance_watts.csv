@@ -1,0 +1,66 @@
+,Appliance,Item,Watts
+0,Air Conditioner,Room*,1000
+1,Air Conditioner,Central*,3500
+2,Air Conditioners rated in tons,Per Ton,3517
+3,Air Conditioners rated in tons,"e.g., 5 Ton AC Unit",17585
+4,Air Conditioners rated in tons,Blender,300
+5,Air Conditioners rated in tons,Blow Dryer,1250
+6,Air Conditioners rated in tons,CB Radio,5
+7,Air Conditioners rated in tons,CD Player,22
+8,Air Conditioners rated in tons,Ceiling Fan,30
+9,Computer,Laptop,47
+10,Computer,Desktop PC,140
+11,Computer,Printer,100
+12,Computer,Coffee Maker,800
+13,Computer,Clock Radio,1
+14,Computer,Dishwasher,1350
+15,Dryer (Clothes),Electric*,4000
+16,Dryer (Clothes),Gas Heated,350
+17,Dryer (Clothes),Electric Blanket,200
+18,Dryer (Clothes),Electric Clock,1
+19,Dryer (Clothes),Electric Frying Pan,1200
+20,Freezer,Conventional 14cf(15 hrs/day runtime),445
+21,Freezer,Sun Frost 19cf Freezer,112
+22,Freezer,Furnace Blower,650
+23,Freezer,Garage Door Opener,350
+24,Heater,Engine Block*,575
+25,Heater,Portable*,1500
+26,Heater,Waterbed*,400
+27,Heater,Stock Tank*,100
+28,Heater,Hot Plate,1200
+29,Heater,Iron,1000
+30,Lightbulbs,Incandescent Bulbs,500
+31,Lightbulbs,100,23
+32,Lightbulbs,75,20
+33,Lightbulbs,60,15
+34,Lightbulbs,40,11
+35,Lightbulbs,Microwave,1050
+36,Lightbulbs,Popcorn Popper,250
+37,Refrigerator/Freezer (runtime in hours/day),Conventional 20cf (15),540
+38,Refrigerator/Freezer (runtime in hours/day),Conventional 16cf (15),475
+39,Refrigerator/Freezer (runtime in hours/day),Sun Frost 16cf DC (7),112
+40,Refrigerator/Freezer (runtime in hours/day),Sun Frost 12cf DC (7),70
+41,Refrigerator/Freezer (runtime in hours/day),Conserv 10.5cf (8),60
+42,Refrigerator/Freezer (runtime in hours/day),Conserv 7.5cf (8),50
+43,Refrigerator/Freezer (runtime in hours/day),Satellite Dish,30
+44,Refrigerator/Freezer (runtime in hours/day),Sewing Machine,100
+45,Refrigerator/Freezer (runtime in hours/day),Shaver,15
+46,Refrigerator/Freezer (runtime in hours/day),Sink Waste Disposal,450
+47,Refrigerator/Freezer (runtime in hours/day),Stereo,20
+48,Refrigerator/Freezer (runtime in hours/day),Table Fan,17.5
+49,Refrigerator/Freezer (runtime in hours/day),Toaster,1150
+50,Tools,Weed Eater,500
+51,Tools,1/4″ drill,250
+52,Tools,1/2″ drill,750
+53,Tools,1″ drill,1000
+54,Tools,9″ disc sander,1200
+55,Tools,3″ belt sander,1000
+56,Tools,12″ chain saw,1100
+57,Tools,14″ band saw,1100
+58,Tools,7 1/4″ circular saw,900
+59,Tools,8 1/4″ circular saw,1400
+60,Vacuum Cleaner,Upright,450
+61,Vacuum Cleaner,Hand,150
+62,Vacuum Cleaner,VCR,40
+63,Vacuum Cleaner,Waffle Iron,1200
+64,Vacuum Cleaner,Washing Machine,500

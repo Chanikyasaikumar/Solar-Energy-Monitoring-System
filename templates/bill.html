@@ -1,0 +1,83 @@
+{% include 'rhead.html'%}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("#region").on("change", function(){
+    let region = $("#region").val()
+    $.get("get_prices?region="+region, function(data, status){
+        let options = `<option disabled="disabled" selected="selected" >Select residential Type</option>
+                        <option value="${data['residential']}">residential- ${data['residential']}</option>
+                        <option value="${data['commercial']}">commercial- ${data['commercial']}</option>
+                        `
+        $("#house_type").html(options)
+      console.log(data)
+
+
+    });
+  });
+  $("#house_type").on("change", ()=>{
+        let watts = $("#watts").val()
+        let house_type = $("#house_type").val()
+        let total_price = parseFloat($("#watts").val())*parseInt($("#house_type").val())
+        total_price = (total_price/100).toFixed(2);
+        let reward_points_amount = 0.01 * parseInt($("#reward_points").val())
+        let total_price2 = total_price - reward_points_amount
+        if(total_price>reward_points_amount){
+            let total_price2 = total_price - reward_points_amount
+        }
+        let total_html = ""
+        if(reward_points_amount!=0){
+            total_html = `<div >Total Amount : $ ${total_price}</div>
+                <div>Discount(reward points): $ ${reward_points_amount}</div>
+                <div>Payable Amount:$  ${total_price2}</div>
+            `
+        }else {
+            total_html = `<div >Total Amount : ${total_price}</div>`
+        }
+        $("#total_price").html(total_html)
+        $("#bill").val(total_price)
+  })
+});
+</script>
+<body class="app">
+<div class="row">
+    <div class="col-4"></div>
+    <div class="col-4 mt-150">
+        <div class="card3 p-20">
+            <div>Total Consumption: </div>
+            <div class="text-center h4 mt-5">{{watts}} kw</div>
+            <form action="" >
+                <div>
+                    <input type="hidden" id="watts" name="watts" value="{{watts}}">
+                    <input type="hidden" id="reward_points" name="reward_points" value="{{reward_points}}">
+                    <input type="hidden" id="bill" name="bill">
+                </div>
+                <div class="mt-20">
+                    <label for="region">Region</label>
+                    <select name="region" id="region" class="form-control" required>
+                        <option value="">Select Region</option>
+                        {% for electricity_cost in electricity_costs.values %}
+                        <option value="{{electricity_cost[0]}} ">{{electricity_cost[0]}} </option>
+                    {% endfor  %}
+                    </select>
+                </div>
+
+                <div class="mt-15">
+                    <label>Select Residency Type</label>
+                    <select id="house_type" name="house_type"  class=" form-control">
+                      <option disabled="disabled" selected="selected" >Select residential Type</option>
+                      <option value="option1">Residential</option>
+                      <option value="option2">Commercial</option>
+                    </select>
+                </div>
+                <div id="total_price" class="mt-15"></div>
+                <div class="mt-15">
+                    <input type="submit" value="Pay Bill" class="btn">
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="col-4" id=""></div>
+</div>
+</body>
+

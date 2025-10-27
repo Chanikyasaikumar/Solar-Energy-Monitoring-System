@@ -1,0 +1,67 @@
+{% if session['role']=='admin' %}
+    {% include 'ahead.html'%}
+{% elif session['role']=='resident' %}
+    {% include 'rhead.html'%}
+{% endif %}
+
+<body class="subs">
+<div class="text-center h1 mt-20" style="color:white">Subscriptions</div>
+
+<div class="row mt-50 p-15">
+    <div class="col-4 ">
+        <div class="card4 p-15 ml-45">
+            <div class="text-center h3 p-10"> EcoSaver Basic</div>
+            <div class="mt-20 p-10">💡 Target: Residential users with moderate usage</div>
+            <div class="p-10">🌍 Source: 50% renewable (solar + wind)</div>
+            <div class="p-10">🔌 Rate: $5.50/kWh</div>
+            <div class="p-10">🎯 Features:</div>
+            <div class="p-5 ml-25">Monthly energy usage tips</div>
+            <div class="p-5 ml-25">Up to 10% discount on energy-efficient appliance upgrades</div>
+            <div class="p-5 ml-25">Access to energy-saving reports</div>
+            <div class="mt-15 text-center">
+                {% if session['role']=='resident' %}
+                    <a href="subscribe_package?package_title=Eco Saver Basic" class="tn h3 text-white p-5 " style="background:green">Subscribe</a>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+
+    <div class="col-4  ">
+        <div class="card4 p-15">
+            <div class="text-center h3 p-10">SmartGreen Plus</div>
+            <div class="mt-20 p-10">💡 Target: Residential or Small Commercial users</div>
+            <div class="p-10">🌍 Source: 75% renewable</div>
+            <div class="p-10">🔌 Rate: $6.20/kWh</div>
+            <div class="p-10">🎯 Features:</div>
+            <div class="p-5 ml-25">Smart meter integration for real-time usage</div>
+            <div class="p-5 ml-25">15% cashback for reducing consumption by 10% month over month</div>
+            <div class="p-5 ml-25">Free annual energy audit</div>
+            <div class="mt-15 text-center">
+                {% if session['role']=='resident' %}
+                    <a href="subscribe_package?package_title=Smart Green Plus" class="tn h3 text-white p-5" style="background:green">Subscribe</a>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+
+    <div class="col-4 ">
+        <div class="card4 p-15">
+            <div class="text-center h3 p-10">Commercial Solar plan</div>
+            <div class="mt-20 p-10">💡 Target: Commercial/industrial users</div>
+            <div class="p-10">🌍 Source: 100% renewable (certified green energy)</div>
+            <div class="p-10">🔌 Rate: $7.00/kWh</div>
+            <div class="p-10">🎯 Features:</div>
+            <div class="p-5 ml-25">Priority customer support</div>
+            <div class="p-5 ml-25">Green certification for businesses</div>
+            <div class="p-5 ml-25">CO₂ savings tracker for CSR reporting</div>
+            <div class="p-5 ml-25">Solar panel consultation include</div>
+            <div class="mt-15 text-center">
+                {% if session['role']=='resident' %}
+                    <a href="subscribe_package?package_title=Commercial Solar Plan" class="tn h3 text-white p-5" style="background:green">Subscribe</a>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>

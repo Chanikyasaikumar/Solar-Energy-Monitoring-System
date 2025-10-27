@@ -1,0 +1,180 @@
+{% include 'rhead.html'%}
+
+<body class="solar">
+<div class="row">
+    <div class="col-4"></div>
+    <div class="col-4">
+        <div class="card1 mt-20 p-20">
+            <label class="h4">Resident Solar Efficiency Form</label>
+            <form action="solar_power_registration_action">
+                <div class=" mt-15">
+                    <label for="city" class=" form-group">City Name</label>
+                    <input type="text" name="city" id="city" placeholder="Enter City"  class="form-control mt-5" required>
+                </div>
+
+                <div class="mt-15">
+                    <label for="panel_area" class=" form-group">Panel Area m²</label>
+                    <input type="text" name="panel_area" id="panel_area" value="2" class="form-control mt-5" required>
+                </div>
+
+                <div class="mt-15">
+                    <label for="efficiency" class=" form-group">Panel Efficiency</label>
+                    <input type="text" name="efficiency" id="efficiency" value="1" class="form-control mt-5" required>
+                </div>
+                <div class="mt-15">
+                    <label for="temperature_coefficient" class=" form-group">Temperature Co efficient</label>
+                    <input type="text" name="temperature_coefficient" value="-0.003" id="temperature_coefficient" class="form-control mt-5" required>
+                </div>
+                <div class="mt-15">
+                    <label for="nominal_temp" class=" form-group"> Nominal Temperature</label>
+                    <input type="number" name="nominal_temp" id="nominal_temp" value="25" class="form-control mt-5" required>
+                </div>
+                <div class="mt-15">
+                    <label for="time_zone" class=" form-group"> Choose Time Zone :</label>
+                    <select id="time_zone" name="time_zone" class="form-control mt-5">
+                      <option disabled="disabled" selected="selected">Select Time Zone</option>
+                      <option value="America/Adak">America/Adak</option>
+                      <option value="America/Anchorage">America/Anchorage</option>
+                      <option value="America/Anguilla">America/Anguilla</option>
+                      <option value="America/Antigua">America/Antigua</option>
+                      <option value="America/Araguaina">America/Araguaina</option>
+                      <option value="America/Argentina/Buenos_Aires">America/Argentina/Buenos_Aires</option>
+                      <option value="America/Argentina/Catamarca">America/Argentina/Catamarca</option>
+                      <option value="America/Argentina/ComodRivadavia">America/Argentina/ComodRivadavia</option>
+                      <option value="America/Argentina/Cordoba">America/Argentina/Cordoba</option>
+                      <option value="America/Argentina/Jujuy">America/Argentina/Jujuy</option>
+                      <option value="America/Argentina/La_Rioja">America/Argentina/La_Rioja</option>
+                      <option value="America/Argentina/Mendoza">America/Argentina/Mendoza</option>
+                      <option value="America/Argentina/Rio_Gallegos">America/Argentina/Rio_Gallegos</option>
+                      <option value="America/Argentina/Salta">America/Argentina/Salta</option>
+                      <option value="America/Argentina/San_Juan">America/Argentina/San_Juan</option>
+                      <option value="America/Argentina/San_Luis">America/Argentina/San_Luis</option>
+                      <option value="America/Argentina/Tucuman">America/Argentina/Tucuman</option>
+                      <option value="America/Argentina/Ushuaia">America/Argentina/Ushuaia</option>
+                      <option value="America/Aruba">America/Aruba</option>
+                      <option value="America/Asuncion">America/Asuncion</option>
+                      <option value="America/Atikokan">America/Atikokan</option>
+                      <option value="America/Atka">America/Atka</option>
+                      <option value="America/Bahia">America/Bahia</option>
+                      <option value="America/Bahia_Banderas">America/Bahia_Banderas</option>
+                      <option value="America/Barbados">America/Barbados</option>
+                      <option value="America/Belem">America/Belem</option>
+                      <option value="America/Belize">America/Belize</option>
+                      <option value="America/Blanc-Sablon">America/Blanc-Sablon</option>
+                      <option value="America/Boa_Vista">America/Boa_Vista</option>
+                      <option value="America/Bogota">America/Bogota</option>
+                      <option value="America/Boise">America/Boise</option>
+                      <option value="America/Buenos_Aires">America/Buenos_Aires</option>
+                      <option value="America/Cambridge_Bay">America/Cambridge_Bay</option>
+                      <option value="America/Campo_Grande">America/Campo_Grande</option>
+                      <option value="America/Cancun">America/Cancun</option>
+                      <option value="America/Caracas">America/Caracas</option>
+                      <option value="America/Catamarca">America/Catamarca</option>
+                      <option value="America/Cayenne">America/Cayenne</option>
+                      <option value="America/Cayman">America/Cayman</option>
+                      <option value="America/Chicago">America/Chicago</option>
+                      <option value="America/Chihuahua">America/Chihuahua</option>
+                      <option value="America/Ciudad_Juarez">America/Ciudad_Juarez</option>
+                      <option value="America/Coral_Harbour">America/Coral_Harbour</option>
+                      <option value="America/Cordoba">America/Cordoba</option>
+                      <option value="America/Costa_Rica">America/Costa_Rica</option>
+                      <option value="America/Coyhaique">America/Coyhaique</option>
+                      <option value="America/Creston">America/Creston</option>
+                      <option value="America/Cuiaba">America/Cuiaba</option>
+                      <option value="America/Curacao">America/Curacao</option>
+                      <option value="America/Danmarkshavn">America/Danmarkshavn</option>
+                      <option value="America/Dawson">America/Dawson</option>
+                      <option value="America/Dawson_Creek">America/Dawson_Creek</option>
+                      <option value="America/Denver">America/Denver</option>
+                      <option value="America/Detroit">America/Detroit</option>
+                      <option value="America/Dominica">America/Dominica</option>
+                      <option value="America/Edmonton">America/Edmonton</option>
+                      <option value="America/Eirunepe">America/Eirunepe</option>
+                      <option value="America/El_Salvador">America/El_Salvador</option>
+                      <option value="America/Ensenada">America/Ensenada</option>
+                      <option value="America/Fort_Nelson">America/Fort_Nelson</option>
+                      <option value="America/Fort_Wayne">America/Fort_Wayne</option>
+                      <option value="America/Fortaleza">America/Fortaleza</option>
+                      <option value="America/Glace_Bay">America/Glace_Bay</option>
+                      <option value="America/Godthab">America/Godthab</option>
+                      <option value="America/Goose_Bay">America/Goose_Bay</option>
+                      <option value="America/Grand_Turk">America/Grand_Turk</option>
+                      <option value="America/Grenada">America/Grenada</option>
+                      <option value="America/Guadeloupe">America/Guadeloupe</option>
+                      <option value="America/Guatemala">America/Guatemala</option>
+                      <option value="America/Guayaquil">America/Guayaquil</option>
+                      <option value="America/Guyana">America/Guyana</option>
+                      <option value="America/Halifax">America/Halifax</option>
+                      <option value="America/Havana">America/Havana</option>
+                      <option value="America/Hermosillo">America/Hermosillo</option>
+                      <option value="America/Indiana/Indianapolis">America/Indiana/Indianapolis</option>
+                      <option value="America/Indiana/Knox">America/Indiana/Knox</option>
+                      <option value="America/Indiana/Marengo">America/Indiana/Marengo</option>
+                      <option value="America/Indiana/Petersburg">America/Indiana/Petersburg</option>
+                      <option value="America/Indiana/Tell_City">America/Indiana/Tell_City</option>
+                      <option value="America/Indiana/Vevay">America/Indiana/Vevay</option>
+                      <option value="America/Indiana/Vincennes">America/Indiana/Vincennes</option>
+                      <option value="America/Indiana/Winamac">America/Indiana/Winamac</option>
+                      <option value="America/Indianapolis">America/Indianapolis</option>
+                      <option value="America/Inuvik">America/Inuvik</option>
+                      <option value="America/Iqaluit">America/Iqaluit</option>
+                      <option value="America/Jamaica">America/Jamaica</option>
+                      <option value="America/Jujuy">America/Jujuy</option>
+                      <option value="America/Juneau">America/Juneau</option>
+                      <option value="America/Kentucky/Louisville">America/Kentucky/Louisville</option>
+                      <option value="America/Kentucky/Monticello">America/Kentucky/Monticello</option>
+                      <option value="America/Knox_IN">America/Knox_IN</option>
+                      <option value="America/Kralendijk">America/Kralendijk</option>
+                      <option value="America/La_Paz">America/La_Paz</option>
+                      <option value="America/Lima">America/Lima</option>
+                      <option value="America/Los_Angeles">America/Los_Angeles</option>
+                      <option value="America/Louisville">America/Louisville</option>
+                      <option value="America/Lower_Princes">America/Lower_Princes</option>
+                      <option value="America/Maceio">America/Maceio</option>
+                      <option value="America/Managua">America/Managua</option>
+                      <option value="America/Manaus">America/Manaus</option>
+                      <option value="America/Marigot">America/Marigot</option>
+                      <option value="America/Martinique">America/Martinique</option>
+                      <option value="America/Matamoros">America/Matamoros</option>
+                      <option value="America/Mazatlan">America/Mazatlan</option>
+                      <option value="America/Mendoza">America/Mendoza</option>
+                      <option value="America/Menominee">America/Menominee</option>
+                      <option value="America/Merida">America/Merida</option>
+                      <option value="America/Metlakatla">America/Metlakatla</option>
+                      <option value="America/Mexico_City">America/Mexico_City</option>
+                      <option value="America/Miquelon">America/Miquelon</option>
+                      <option value="America/Moncton">America/Moncton</option>
+                      <option value="America/Monterrey">America/Monterrey</option>
+                      <option value="America/Montevideo">America/Montevideo</option>
+                      <option value="America/Montreal">America/Montreal</option>
+                      <option value="America/Montserrat">America/Montserrat</option>
+                      <option value="America/Nassau">America/Nassau</option>
+                      <option value="America/New_York">America/New_York</option>
+                    </select>
+
+                </div>
+
+                <div class="row">
+                    <div class="col-6 p-5">
+                         <div class="mt-15">
+                            <label for="latitude" class=" form-group">Latitude </label>
+                            <input type="text" value="40.7128" name="latitude" id="latitude" class="form-control mt-5" required>
+                         </div>
+                    </div>
+                    <div class="col-6 p-5">
+                        <div class="mt-15">
+                            <label for="longitude" class=" form-group">Longitude</label>
+                            <input type="text" value="-74.0060" name="longitude" id="longitude" class="form-control mt-5" required>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-15 text-center">
+                    <input type="submit" value="Submit" class="p-10 width">
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="col-4"></div>
+</div>
+</body>

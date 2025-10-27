@@ -1,0 +1,33 @@
+{% include 'links.html'%}
+
+<nav class="row nav p-10">
+    <div class="col-4 center h4 text-white">SolarPower</div>
+    <div class="">
+        <div class="row">
+            <div class="row">
+                 <a href="/admin_home" class="nav-link "></a>
+                <form action="graph">
+                    <select id="service" name="service" onchange="this.form.submit()" class="text-white bg" style="background: #b2b2b2;">
+                          <option  class="text-center ">Survey</option>
+                          <optgroup label="Solar Survey">
+                              <option value="forecast_graph">FORE CAST</option>
+                              <option value="generation_graph">GENERATION</option>
+                          </optgroup>
+                          <optgroup label="Electricity Survey">
+                              <option value="appliances_graph" >APPLIANCES</option>
+                          </optgroup>
+                    </select>
+                </form>
+            </div>
+            <div class="">
+                <a href="/subscriptions" class="nav-link">Subscriptions</a>
+            </div>
+            <div class="">
+                <a href="/subscribers" class="nav-link">Subscribers</a>
+            </div>
+            <div class="">
+                <a href="logout" class="nav-link">Logout</a>
+            </div>
+        </div>
+    </div>
+</nav>

@@ -1,0 +1,36 @@
+{%include 'ahead.html'%}
+
+<body class="img">
+<div class="row">
+    <div class="col-4"></div>
+    <div class="col-4"></div>
+    <div class="col-4">
+        <div class="card p-10 mt-150">
+            <div class="h2 text-center mt-20">Subscribers</div>
+            {% for subscriber in subscribers%}
+            <table border="1" class="table mt-20 ">
+                <thead>
+                    <tr>
+                        <td class="h5 p-10">Plan Title</td>
+                        <td class="h5">Resident</td>
+                        <td class="h5">Plan Purchase Date</td>
+                        <td class="h5">Plan Expire Date</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="p-10">{{subscriber[1]}}</td>
+                        <td>{{subscriber[9]}}</td>
+                        <td>{{subscriber[6]}}</td>
+                        <td>{{subscriber[7]}}</td>
+                    </tr>
+                </tbody>
+            </table>
+            {% endfor %}
+        </div>
+    </div>
+
+</div>
+
+</body>
+

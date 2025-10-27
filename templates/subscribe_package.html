@@ -1,0 +1,83 @@
+{% include 'rhead.html'%}
+
+
+    <form action="add_subscription_action" >
+        <div class="row mt-50 ">
+            <div class="col-6  p-50">
+                <div class="card4 p-50 ml-200">
+                    <input type="hidden" name="package_title" value="{{package_title}}" id="package_title">
+
+                        <div>
+                            <div class="text-center h4">{{package_title}}</div>
+                        </div>
+                        <div class="mt-15">Enter Address</div>
+
+                        <div class="mt-15" >
+                            <label for="street_name"> Street Name</label>
+                            <div class="mt-5">
+                                <input type="text" class="form-control" name="street_name" id="street_name"  required placeholder="Enter Street Name">
+                            </div>
+                        </div>
+
+                        <div class="mt-15">
+                            <label for="apartment_name"> Apartment/Building Name</label>
+                            <div class="mt-5">
+                                <input type="text" class="form-control" name="apartment_name" id="apartment_name"  required placeholder="Enter Apartment Name ">
+                            </div>
+                        </div>
+
+                        <div class="mt-15">
+                            <label for="zip_code"> Zip Code </label>
+                            <div class="mt-5">
+                                <input type="number" class="form-control" name="zip_code" id="zip_code"  required placeholder="Enter Zip Code">
+                            </div>
+                        </div>
+
+                        <div class="mt-15">
+                            <label for="contact"> Contact Number </label>
+                            <div class="mt-5">
+                                <input type="number" class="form-control" name="contact" id="contact"  required placeholder="Enter Contact Number">
+                            </div>
+                        </div>
+                </div>
+            </div>
+
+            <div class="col-6 p-50">
+                <div class="">
+                    <div class="card4  p-50">
+                        <h3 class="text-center">Payment</h3>
+
+                            <div class="mt-10">
+                                <label for="card_number">Card Number</label>
+                                <div class="mt-5">
+                                    <input type="number" class="form-control" name="card_number" id="card_number" maxlength="16" required placeholder="Enter Card Number">
+                                </div>
+                            </div>
+                            <div class="mt-10">
+                                <label for="holder_name">Name</label>
+                                <div class="mt-5">
+                                    <input type="text" class="form-control" name="holder_name" id="holder_name" required placeholder="Enter Card Holder Name">
+                                </div>
+                            </div>
+                            <div class="mt-10">
+                                <label for="expire_date">Expire Date</label>
+                                <div class="mt-5">
+                                    <input type="month" class="form-control" min="{{date}}" name="expire_date" id="expire_date" required>
+                                </div>
+                            </div>
+
+                            <div class="mt-10">
+                                <label for="cvv">CVV </label>
+                                <div class="mt-5">
+                                    <input type="number" class="form-control"  name="cvv" id="cvv" required placeholder="Enter CVV">
+                                </div>
+                            </div>
+
+                            <div>
+                                <input type="submit" class="btn p-5 mt-20" value="Add Card Details ">
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>

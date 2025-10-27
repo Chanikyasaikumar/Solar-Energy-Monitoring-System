@@ -1,0 +1,79 @@
+{% include 'rhead.html'%}
+
+
+<div class="row">
+    <div class="col-10"></div>
+    <div class="col-2 mt-30">
+        <a href="add_appliances" style="background-color:green;color:white" class="p-10 tn">+Add Home Appliance</a>
+    </div>
+</div>
+
+
+<div class="row mt-50 " >
+    <div class="col-1"></div>
+    <div class="col-6 card2 p-15">
+        <table border="1" class="table">
+            <thead>
+                <tr class="text-center">
+                    <th class="p-15">Appliances</th>
+                    <th>Wattage</th>
+                    <th>Hours Per Day</th>
+                    <th>Total Consumption</th>
+                </tr>
+            </thead>
+            {% set total_amount = namespace(value=0)%}
+            {% for appliance in appliances%}
+                {% set total_amount.value = total_amount.value+int(appliance[4])%}
+            <tbody>
+                <tr class="text-center">
+                    <td class="p-15">{{appliance[1]}}</td>
+                    <td>{{appliance[2]}} watts</td>
+                    <td>{{appliance[3]}} hrs</td>
+                    <td>{{appliance[4]}} watts</td>
+                </tr>
+            </tbody>
+            {% endfor %}
+        </table>
+    </div>
+
+    <div class="col-5  ml-45">
+        <div class=" mt-50">
+            <div class="p-10">
+                <div class="text-center">Watts Consumption Per Day: {{total_amount.value/1000}} kw</div>
+            </div>
+            <div class="p-10">
+                <div class="text-center">Watts Consumption Per Month:{{round(total_amount.value/1000*30,2)}} kw</div>
+            </div>
+
+            <div class="p-10">
+                {% if grid_import != None %}
+                    <div class="p-10 text-center">Grid Import : {{grid_import}} kw </div>
+                {% endif %}
+                {% if carbon_emission_saved != None %}
+                    <div class="p-10 text-center">Carbon Emission Saved : {{carbon_emission_saved}} kg</div>
+                {% endif %}
+                {% if carbon_emission_from_grid != None %}
+                    <div class="p-10 text-center">Carbon Emission From Grid : {{round(carbon_emission_from_grid,2)}} kw </div>
+                {% endif %}
+                {% if net_carbon_emission != None %}
+                    <div class="p-10 text-center">Net Carbon Emission : {{net_carbon_emission}} kw </div>
+                {% endif %}
+                {% if reward_points != None %}
+                    <div class="+ p-10 text-center">Reward Points : {{reward_points}} points </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="row">
+    <div class="col-8"></div>
+    <div class=" ">
+        <a href="bill?watts={{round(total_amount.value/1000*30,2)}}&reward_points={{reward_points}}" style="background-color:green;color:white" class="p-10 tn">Generate Bill</a>
+    </div>
+    <div class="col-1"></div>
+</div>
+
+
+
