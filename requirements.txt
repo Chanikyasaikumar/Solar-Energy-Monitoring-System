@@ -5,4 +5,4 @@ gunicorn
 Plotly
 mysqlclient
 pymysql
-
+prophet
