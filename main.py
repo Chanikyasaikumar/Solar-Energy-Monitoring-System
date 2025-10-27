@@ -12,7 +12,7 @@ import plotly.graph_objs as go
 import numpy as np
 
 
-conn = pymysql.connect(host='localhost', user='root', password='Chanikya@123', db='solar')
+conn = pymysql.connect(host='os.environ.get', user='root', password='Chanikya@123', db='solar')
 cursor = conn.cursor()
 app = Flask(__name__)
 app.secret_key = "solar"
